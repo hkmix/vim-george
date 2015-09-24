@@ -98,7 +98,6 @@ syn match numericalConstants '\<\d\+\>'
 syn match stepId '\<\d\+\>' contained
 syn match stepNumber '^\s*\d\+)'
 
-syn match commandIncl '#\(check\|u\|a\|q\)' contained
 syn match commands '#\(check\|u\|a\|q\)' nextgroup=commandParam
 
 " Comments
