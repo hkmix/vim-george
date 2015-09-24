@@ -69,7 +69,7 @@ except:
 
 #Post the file contents to George as the input script
 try:
-    url = 'https://www.student.cs.uwaterloo.ca/~se212/george-1/ask-george/george.cgi'
+    url = 'https://www.student.cs.uwaterloo.ca/~se212/george/ask-george/george.cgi'
     data = urllib.parse.urlencode({
         'input_script': text.strip(),
         'check': 'Ask George',
