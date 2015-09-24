@@ -5,8 +5,8 @@ endif
 let s:script = fnamemodify(resolve(expand("<sfile>:p")), ":h:h") . "/george.py"
 
 function! GeorgeCheck()
-    let s:filename = fnameescape(expand("%:p"))
-    new | execute "read! python " . fnameescape(s:script) . " " . fnameescape(s:filename)
+    let filename = fnameescape(expand("%:p"))
+    new | execute "read! python " . fnameescape(s:script) . " " . fnameescape(filename)
     silent! g/^+-+-.*$/de
     silent! g/^\s*$/de
     silent! 2,s/^#.*/\r&/g
