@@ -3,9 +3,9 @@ if !(has("python"))
 endif
 
 let s:script = fnamemodify(resolve(expand("<sfile>:p")), ":h:h") . "/george.py"
-let s:filename = fnameescape(expand("%"))
 
 function! GeorgeCheck()
+    let s:filename = fnameescape(expand("%:p"))
     new | execute "read! python " . fnameescape(s:script) . " " . fnameescape(s:filename)
     silent! g/^+-+-.*$/de
     silent! g/^\s*$/de
