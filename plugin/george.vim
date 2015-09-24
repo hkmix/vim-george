@@ -1,3 +1,7 @@
+if !(has('python'))
+    finish
+endif
+
 function! GeorgeCheck()
-    cexpr system("../george.py " . expand("%"))
+    pyfile ../george.py
 endfunction
