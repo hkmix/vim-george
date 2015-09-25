@@ -1,7 +1,3 @@
-if !(has("python"))
-    finish
-endif
-
 let s:script = fnamemodify(resolve(expand("<sfile>:p")), ":h:h") . "/george.py"
 
 function! GeorgeCheck()

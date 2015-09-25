@@ -2,6 +2,10 @@
 
 Convenience package for George logic-checker source files
 
+## Requirements
+
+- Python 3 (will probably be changed sometime)
+
 ## Features
 
 - Syntax highlighting for `.grg` source files (forked from [tpcstld/GeorgeSyntaxHighlighting](https://github.com/tpcstld/GeorgeSyntaxHighlighting) with minor improvements)
