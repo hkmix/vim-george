@@ -12,7 +12,8 @@ syn keyword basicLanguageKeywordsBy by
 syn keyword basicLanguageKeywordsOn on contained nextgroup=stepId
 
 syn match logicOperators '&'
-syn match logicOperators  '|'
+syn match logicOperators '|'
+syn match logicOperators '|-'
 syn match logicOperators '=>'
 syn match logicOperators '<=>'
 syn match logicOperators '|='
@@ -35,7 +36,7 @@ syn keyword transformationalProofCommands swap_vars move_exists move_forall
 syn match transformationalProofOperators '<==>'
 
 " Natural Deduction Matching
-syn keyword naturalDeductionCommands and_i and_e or_i lem
+syn keyword naturalDeductionCommands and_i and_e or_i or_e lem
 syn keyword naturalDeductionCommands imp_e not_e not_not_i not_not_e
 syn keyword naturalDeductionCommands iff_i iff_e trans iff_mp
 syn keyword naturalDeductionCommands exists_i forall_e
