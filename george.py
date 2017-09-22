@@ -67,27 +67,13 @@ except:
 
 #Post the file contents to George as the input script
 try:
-    url = 'https://www.student.cs.uwaterloo.ca/~se212/george/ask-george/george.cgi'
-    data = urllib.parse.urlencode({
-        'input_script': text.strip(),
-        'check': 'Ask George',
-        'filename': '',
-        'download': '',
-        'download_file_name': '',
-        'uwid': '',
-        'bug': ''
-    }).encode('utf-8')
-
-    request = urllib.request.Request(url)
-    response = urllib.request.urlopen(request, data)
-    html = response.read().decode('utf-8')
-except:
+    url = 'https://www.student.cs.uwaterloo.ca/~se212/george/ask-george/cgi-bin/george.cgi/check'
+    d = text.strip().encode()
+    req = urllib.request.Request(url, data=d, headers = {'Content-Type': 'text/plain'})
+    resp = urllib.request.urlopen(req)
+    george_response = resp.read().decode()
+    print(george_response)
+except Exception as e:
     print('Problem getting George feedback.')
     sys.exit(0)
 
-#Parse the returned HTML and make sure we find the feedback
-htmlParser = FeedbackHTMLParser()
-htmlParser.feed(html)
-
-if not htmlParser.foundFeedback:
-    print('No feedback found in response.')
