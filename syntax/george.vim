@@ -105,7 +105,7 @@ syn match commands '#\(check\|u\|a\|q\)' nextgroup=commandParam
 syn match comments '%.*$' contains=commentCommands,propositions
 syn match commentCommands contained '\(where\|means\)' nextgroup=meanings
 syn match meanings ' .*$' contained
-syn match propositions contained ' [a-z] '
+syn match propositions contained '\<[a-z]\>'
 
 " Regions
 syn region commandParam start=' \<' end='$' contained contains=commandIncl
